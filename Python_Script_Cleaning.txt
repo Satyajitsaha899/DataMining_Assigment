@@ -1,0 +1,38 @@
+##import panda
+import pandas as pd
+
+##import Numpy
+import numpy as np
+
+df=pd.read_csv("S:\Data_mining\CA2\Google-Playstore-32K.csv")
+
+df.head ()
+
+df.columns
+
+missing_values = ["n/a","na","--"]
+
+df['Reviews']
+
+df['Reviews'].isnull()
+
+df['Rating'].isnull()
+
+df.isnull().sum()
+
+df.isnull().values.any()
+
+df.isnull().sum().sum()
+
+df['Reviews'].fillna(125, inplace=True)
+
+df.get_dtype_counts()
+
+df.dtypes
+
+df.index.values
+
+'foo' in df.index.values
+
+df.dropna(thresh=int(df.shape[0] * .9), axis=1)
+
